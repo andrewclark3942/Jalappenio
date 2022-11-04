@@ -1,38 +1,110 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+section {
+    margin: 30px 10px;
+}
+
+.btn {
+    background-color: rgb(67, 182, 67) !important;
+    border-color: rgb(67, 182, 67) !important;
+    color: black;
+}
+
+h2 {
+    font-size: 1.5em;
+    display: flex;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+#pepperLogo {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: -1px;
+    top: -1px;
+}
+
+.logoBackground {
+    background-color: rgb(67, 182, 67);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.progress {
+    margin: 0px 5px 10px 5px;
+}
+
+.progressBarHeader {
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+#mealsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 10px 0px;
+}
+
+#mealsHeader h2 {
+    margin-bottom: 0;
+}
+
+.meal {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+    margin: 10px 0px 10px 0px;
+}
+
+.mealName {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.mealData {
+    font-size: 1em;
+    margin: 0;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
