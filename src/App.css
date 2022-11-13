@@ -1,5 +1,8 @@
 .App {
     text-align: center;
+    --primary-color: #23a01d;
+    --secondary-color: #e33535;
+    --tertiary-color: #d54b00;
 }
 
 .App-logo {
@@ -17,9 +20,9 @@ section {
     margin: 30px 10px;
 }
 
-.btn {
-    background-color: rgb(67, 182, 67) !important;
-    border-color: rgb(67, 182, 67) !important;
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
     color: black;
 }
 
@@ -48,7 +51,7 @@ h2 {
 }
 
 .logoBackground {
-    background-color: rgb(67, 182, 67);
+    background-color: var(--primary-color);
     width: 40px;
     height: 40px;
     border-radius: 20px;
