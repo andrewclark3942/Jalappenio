@@ -1,8 +1,8 @@
 .App {
     text-align: center;
-    --primary-color: #23a01d;
-    --secondary-color: #e33535;
-    --tertiary-color: #d54b00;
+    --ja-primary-color: #25bb1d;
+    --ja-secondary-color: #e33535;
+    --ja-tertiary-color: #d54b00;
 }
 
 .App-logo {
@@ -20,11 +20,24 @@ section {
     margin: 30px 10px;
 }
 
-.btn-primary {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
+button {
+    font-size: 0.75em;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: #25bb1d;
+    border-color: #25bb1d;
     color: black;
 }
+
+/* .primaryButton {
+    background-color: #25bb1d;
+    border-color: #25bb1d;
+    color: black;
+} */
 
 h2 {
     font-size: 1.5em;
@@ -51,7 +64,7 @@ h2 {
 }
 
 .logoBackground {
-    background-color: var(--primary-color);
+    background-color: var(--ja-primary-color);
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -82,16 +95,45 @@ h2 {
     margin-bottom: 0;
 }
 
+.foodCardList {
+    padding: 10px;
+}
+
 .meal {
+    display: flex;
     padding: 5px;
     border-radius: 10px;
     background-color: rgb(246, 246, 246);
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+.mealHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.textImage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textImage p,
+.textImage ul {
+    margin: 0;
+}
+
+.textImage > img {
+    max-width: 60px;
+    border-radius: 5px;
 }
 
 .mealName {
     font-size: 1em;
     font-weight: bold;
+    display: inline-block;
 }
 
 .mealData {

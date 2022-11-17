@@ -1,22 +1,34 @@
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
-function FoodCard() {
+function FoodCard(props) {
+    const food = props.food;
+
     return (
         <>
-            <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+            <Card className="meal">
                 <Card.Body>
-                    <Card.Title>Jalapeño</Card.Title>
-                    <Card.Text>
-                        <ul>
-                            <li>Serving Quantity: Serving Unit</li>
-                            <li>Calories: </li>
-                            <li></li>
-                        </ul>
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <div className="mealHeader">
+                        <Card.Title className="mealName">
+                            {food.food_name.toUpperCase()}
+                        </Card.Title>
+                        <Button variant="primary">+</Button>
+                    </div>
+                    <div className="textImage">
+                        <Card.Text>
+                            <ul>
+                                <li>
+                                    {food.serving_qty} {food.serving_unit} (
+                                    {food.serving_weight_grams}g)
+                                </li>
+                                <li>Calories: {food.nf_calories}</li>
+                            </ul>
+                        </Card.Text>
+                        <Card.Img variant="top" src={food.photo.thumb} />
+                    </div>
                 </Card.Body>
             </Card>
         </>
     );
 }
+export default FoodCard;

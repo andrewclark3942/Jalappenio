@@ -16,16 +16,16 @@ import AddMeal from "./AddMeal";
 function App() {
     return (
         <div className="App">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+            <nav className="navbar navbar-expand-lg bg-light">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">
                         Jalappeño
                     </a>
-                    <div class="logoBackground">
+                    <div className="logoBackground">
                         <img src={pepper} alt="Jalapeño Logo" id="pepperLogo" />
                     </div>
                     <button
-                        class="navbar-toggler"
+                        className="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
@@ -33,30 +33,30 @@ function App() {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                     <div
-                        class="collapse navbar-collapse"
+                        className="collapse navbar-collapse"
                         id="navbarSupportedContent"
                     >
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
                                 <a
-                                    class="nav-link active"
+                                    className="nav-link active"
                                     aria-current="page"
                                     href="#"
                                 >
                                     Set Goals
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">
+                            <li className="nav-item">
+                                <a className="nav-link active" href="#">
                                     About
                                 </a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li className="nav-item dropdown">
                                 <a
-                                    class="nav-link dropdown-toggle"
+                                    className="nav-link dropdown-toggle"
                                     href="#"
                                     role="button"
                                     data-bs-toggle="dropdown"
@@ -64,37 +64,37 @@ function App() {
                                 >
                                     Settings
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul className="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="#">
                                             Account Settings
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="#">
                                             Sign Out
                                         </a>
                                     </li>
                                     <li>
-                                        <hr class="dropdown-divider" />
+                                        <hr className="dropdown-divider" />
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="#">
                                             Something else here
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
+                        <form className="d-flex" role="search">
                             <input
-                                class="form-control me-2"
+                                className="form-control me-2"
                                 type="search"
                                 placeholder="Search"
                                 aria-label="Search"
                             />
                             <button
-                                class="btn btn-outline-success"
+                                className="btn btn-outline-success"
                                 type="submit"
                             >
                                 Search
@@ -114,28 +114,28 @@ function App() {
                         <h2>Today's Meals</h2>
                         <AddMeal></AddMeal>
                     </div>
-                    <div class="meal">
-                        <div class="mealHeader">
-                            <h3 class="mealName">Chicken Salad</h3>
+                    <div className="meal">
+                        <div className="mealHeader">
+                            <h3 className="mealName">Chicken Salad</h3>
                         </div>
-                        <div class="mealBody">
-                            <p class="mealData">Servings: 1 serving</p>
-                            <p class="mealData">Calories: 210</p>
-                            <p class="mealData">Carbohydrates: 35g</p>
-                            <p class="mealData">Protein: 50g</p>
-                            <p class="mealData">Fat: 15g</p>
+                        <div className="mealBody">
+                            <p className="mealData">Servings: 1 serving</p>
+                            <p className="mealData">Calories: 210</p>
+                            <p className="mealData">Carbohydrates: 35g</p>
+                            <p className="mealData">Protein: 50g</p>
+                            <p className="mealData">Fat: 15g</p>
                         </div>
                     </div>
-                    <div class="meal">
-                        <div class="mealHeader">
-                            <h3 class="mealName">Feta Pasta</h3>
+                    <div className="meal">
+                        <div className="mealHeader">
+                            <h3 className="mealName">Feta Pasta</h3>
                         </div>
-                        <div class="mealBody">
-                            <p class="mealData">Servings: 2 serving</p>
-                            <p class="mealData">Calories: 450</p>
-                            <p class="mealData">Carbohydrates: 60g</p>
-                            <p class="mealData">Protein: 10g</p>
-                            <p class="mealData">Fat: 25g</p>
+                        <div className="mealBody">
+                            <p className="mealData">Servings: 2 serving</p>
+                            <p className="mealData">Calories: 450</p>
+                            <p className="mealData">Carbohydrates: 60g</p>
+                            <p className="mealData">Protein: 10g</p>
+                            <p className="mealData">Fat: 25g</p>
                         </div>
                     </div>
                 </section>

@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
+import FoodCardList from "./FoodCardList";
 
 function AddMeal() {
     const [show, setShow] = useState(false);
@@ -10,9 +11,15 @@ function AddMeal() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [foods, setFoods] = useState({ foods: [] });
+
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button
+                variant="primary"
+                className="primaryButton"
+                onClick={handleShow}
+            >
                 + Meal
             </Button>
 
@@ -37,11 +44,16 @@ function AddMeal() {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button
+                        variant="secondary"
+                        className="primaryButton"
+                        onClick={handleClose}
+                    >
                         Close
                     </Button>
                     <Button
                         variant="primary"
+                        className="primaryButton"
                         onClick={() =>
                             getFood(document.querySelector("#foodSearch").value)
                         }
@@ -49,52 +61,32 @@ function AddMeal() {
                         Search
                     </Button>
                 </Modal.Footer>
+                <FoodCardList foods={foods} />
             </Modal>
         </>
     );
-}
-export default AddMeal;
 
-//API URL: https://trackapi.nutritionix.com/v2/natural/nutrients
-async function getFood(food) {
-    try {
-        const res = await axios({
-            method: "POST",
-            url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
-            data: {
-                query: food,
-                timezone: "US/Eastern",
-            },
-            headers: {
-                "Content-Type": "application/json",
-                "x-app-id": "5b0c0774",
-                "x-app-key": "56390e237a157eb7fd5f9b927595f114",
-            },
-        });
-        console.log(res.data);
-    } catch (err) {
-        console.error(err);
+    //API URL: https://trackapi.nutritionix.com/v2/natural/nutrients
+    async function getFood(food) {
+        try {
+            const res = await axios({
+                method: "POST",
+                url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
+                data: {
+                    query: food,
+                    timezone: "US/Eastern",
+                },
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-app-id": "5b0c0774",
+                    "x-app-key": "56390e237a157eb7fd5f9b927595f114",
+                },
+            });
+            console.log(res.data);
+            setFoods(res.data);
+        } catch (err) {
+            console.error(err);
+        }
     }
 }
-
-// async function getFood(food) {
-//     try {
-//         const res = await axios.post(
-//             "https://trackapi.nutritionix.com/v2/natural/nutrients",
-//             {
-//                 query: food,
-//                 timezone: "US/Eastern",
-//             },
-//             {
-//                 headers: {
-//                     "Content-Type": "application/json",
-//                     "x-app-id": "5b0c0774",
-//                     "x-app-key": "56390e237a157eb7fd5f9b927595f114",
-//                 },
-//             }
-//         );
-//         console.log(res.data);
-//     } catch (err) {
-//         console.error(err);
-//     }
-// }
+export default AddMeal;
